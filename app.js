@@ -27,14 +27,14 @@ Ext.application({
     ],
 
     views: [
-        'Home', 'WeatherQueryForm', 'WeatherList'
+        'Home', 'WeatherQueryForm', 'WeatherList', 'WeatherChart', 'QueryFormsPanel', 'WeatherChartQueryForm'
     ],
 
     controllers: ['WeatherQueryForm'],
-    
-    models: ['Weather'],
-    
-    stores: ['WeatherList'],
+
+    models: ['Weather', 'History'],
+
+    stores: ['WeatherList', 'HistoryList'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -67,11 +67,14 @@ Ext.application({
                     xtype: 'home'
             }, {
                     title: 'Query',
-                    xtype: 'weather_query_form'
+                    xtype: 'query_forms_panel'
             },
                 {
                     title: 'Weather',
                     xtype: 'weather_list'
+            }, {
+                    title: 'Chart',
+                    xtype: 'weather_chart'
             }]
         });
     },

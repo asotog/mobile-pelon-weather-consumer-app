@@ -22,3 +22,12 @@
     line-height: 1.5em;
     margin: 10px 20px 12px 20px;
 }
+
+.weather-chart h3 {
+    text-align: center;
+}
+
+/* hides chart legend */
+.x-legend {
+    display: none;
+}
